@@ -1,6 +1,29 @@
-import Card from './components/Card';
-import Header from './components/Header';
-import Drawer from './components/Drawer';
+import Card from "./components/Card/Card";
+import Header from "./components/Header";
+import Drawer from "./components/Drawer";
+
+const arr = [
+  {
+    title: "Мужские кроссовки Abibas air",
+    price: 12999,
+    imageUrl: "/img/tapki/1.jpg",
+  },
+  {
+    title: "Мужские кроссовки Airmin 270",
+    price: 15890,
+    imageUrl: "/img/tapki/2.jpg",
+  },
+  {
+    title: "Женские кроссовки Hike berlo",
+    price: 9890,
+    imageUrl: "/img/tapki/3.jpg",
+  },
+  {
+    title: "Мужские кроссовки Nikola 1337",
+    price: 20890,
+    imageUrl: "/img/tapki/4.jpg",
+  },
+];
 
 function App() {
   return (
@@ -16,13 +39,15 @@ function App() {
           </div>
         </div>
 
-
         <div className="sneakers">
-
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {arr.map((obj) => (
+            <Card
+              title={obj.title}
+              price={obj.price}
+              imageUrl={obj.imageUrl}
+              onClick={() => console.log(obj)}
+            />
+          ))}
         </div>
       </div>
     </div>
