@@ -1,10 +1,12 @@
 import styles from './Card.module.scss';
 
+console.log(styles);
+
 
 function Card(props) {
   return (
     <div className={styles.card}>
-      <div className="favorite">
+      <div className={styles.favorite}>
         <img
           width={32}
           height={32}
@@ -14,8 +16,8 @@ function Card(props) {
       </div>
       <img width={133} height={112} src={props.imageUrl} alt="Tapki" />
       <p>{props.title}</p>
-      <div className="cardBottom">
-        <div className="cardPrice">
+      <div className={styles.cardBottom}>
+        <div className={styles.cardPrice}>
           <span>Цена:</span>
           <b>{props.price}</b>
         </div>
