@@ -78,8 +78,7 @@ header {
 
     .sneakers {
       display: flex;
-    
-      
+      flex-wrap: wrap;
     }
   }
 }
@@ -241,4 +240,8 @@ header {
   &:active {
     background: darken(#9dd558, 5%);
   }
+}
+
+.openCard {
+  cursor: pointer;
 }
